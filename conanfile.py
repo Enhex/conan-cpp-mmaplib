@@ -11,7 +11,7 @@ class CppmmaplibConan(ConanFile):
 	# No settings/options are necessary, this is header only
 
 	def source(self):
-		self.run("git clone --depth 1 https://github.com/Enhex/cpp-mmaplib.git")
-		
+		self.run("git clone --depth 1 https://github.com/Enhex/cpp-mmaplib.git .")
+
 	def package(self):
-		self.copy("*.h", src='cpp-mmaplib', dst='include')
+		self.copy("*.h", src='./', dst='include')
